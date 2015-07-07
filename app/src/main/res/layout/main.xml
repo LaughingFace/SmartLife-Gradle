@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:id="@+id/device_top_container"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@mipmap/main_bg">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/mask">
+
+        <FrameLayout
+                android:layout_weight="240"
+                android:id="@+id/main_logo"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:gravity="center"
+                    android:id="@+id/tv_mode"
+                    android:textSize="20sp"
+                    android:textColor="@color/main_text"
+                    android:focusableInTouchMode="false"
+                    android:focusable="false"
+                    android:text=""/>
+
+            <FrameLayout android:layout_width="match_parent"
+                         android:layout_height="match_parent">
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:gravity="center">
+                    <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+                    <ImageView
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/mianFlag"
+                            android:adjustViewBounds="true"
+                            android:maxHeight="270dp"
+                            android:maxWidth="270dp"
+                            android:src="@mipmap/main_flag"
+                            />
+                    <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+                </LinearLayout>
+
+                <com.laughingFace.microWash.ui.view.CircleLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:angleOffset="160"
+                        app:angleRange="270"
+                        >
+
+                    <com.laughingFace.microWash.ui.view.WaterRipplesView
+                            android:id="@+id/checkArea"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            app:waveOnLoad="false"
+                            app:waveColor="#80ff0000"
+                            app:waveCount="3"
+                            app:canDrag="true"/>
+
+                    <com.laughingFace.microWash.ui.view.WaterRipplesView
+                            android:id="@+id/model_standard"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            app:waveCount="2"
+                            app:waveOnLoad="false"
+                            app:waveColor="#00ce9b"
+                            />
+
+                    <com.laughingFace.microWash.ui.view.WaterRipplesView
+                            android:id="@+id/model_dryoff"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            app:waveColor="#00ce9b"
+                            app:waveOnLoad="false"
+                            app:waveCount="2"
+                            />
+
+                    <com.laughingFace.microWash.ui.view.WaterRipplesView
+                            android:id="@+id/model_timingwash"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            app:waveColor="#00ce9b"
+                            app:waveOnLoad="false"
+                            app:waveCount="2"/>
+
+                    <com.laughingFace.microWash.ui.view.WaterRipplesView
+                            android:id="@+id/model_sterilization"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            app:waveColor="#00ce9b"
+                            app:waveOnLoad="false"
+                            app:waveCount="2"/>
+
+                </com.laughingFace.microWash.ui.view.CircleLayout>
+
+            </FrameLayout>
+        </FrameLayout>
+
+        <ImageView
+                android:id="@+id/mainText"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:adjustViewBounds="true"
+                android:maxHeight="70dp"
+                android:maxWidth="230dp"
+                android:layout_marginTop="-27dp"
+                android:layout_marginBottom="27dp"
+                android:src="@mipmap/main_flag_text"
+                />
+
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="25">
+            <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+
+            <TextView android:layout_width="0dp"
+                      android:layout_weight="1"
+                      android:id="@+id/ds_device"
+                      android:layout_height="match_parent"
+                      android:background="@mipmap/select_bg"
+                      android:gravity="center"
+
+                      android:textSize="22sp"
+                      android:textColor="@color/main_text"
+                    />
+
+            <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+
+        </LinearLayout>
+        <include layout="@layout/bottom"/>
+
+    </LinearLayout>
+
+</LinearLayout>

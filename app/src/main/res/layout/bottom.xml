@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+<RelativeLayout
+        android:layout_weight="100"
+        android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:orientation="horizontal"
+              android:layout_margin="10dp">
+
+    <ImageButton
+        android:layout_width="62dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:id="@+id/light"
+        android:background="@mipmap/btn_light_off"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:scaleType="centerCrop"
+        android:layout_alignParentLeft="true"
+        android:contentDescription=""
+        />
+
+    <ImageButton
+            android:visibility="gone"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/warning"
+        android:background="@mipmap/warn"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/light"
+        android:layout_toRightOf="@+id/light"
+        />
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/nextPage"
+        android:background="@drawable/nextpage"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginBottom="7dp"
+        android:scaleType="centerCrop"
+        android:layout_alignParentRight="true"
+        />
+</RelativeLayout>
+</merge>

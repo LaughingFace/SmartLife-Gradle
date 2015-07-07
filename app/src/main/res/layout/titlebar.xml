@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/title">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@mipmap/title_text"
+        android:adjustViewBounds="true"
+        android:padding="5dp"
+        android:maxWidth="170dp"
+        android:maxHeight="100dp"
+        android:paddingStart="7dp"
+        android:paddingEnd="7dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"/>
+
+    <Button
+            android:layout_width="104dp"
+            android:layout_height="32dp"
+            android:background="@mipmap/title_conn_bg"
+
+            android:drawableStart="@mipmap/title_conn_state"
+            android:drawableLeft="@mipmap/title_conn_state"
+            android:text="@string/noConnect"
+            android:textColor="#a7aeb3"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="7dp"
+            android:id="@+id/btn_connect"
+            android:paddingLeft="10dp"
+            android:paddingEnd="3dp"
+            android:paddingRight="3dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            />
+
+</RelativeLayout>
