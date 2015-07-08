@@ -1,1 +1,1 @@
-include ':app', ':circularfloatingactionmenu', ':fabbutton'
+include ':app', ':circularfloatingactionmenu', ':fabbutton', ':waterwaveprogress'

@@ -1,4 +1,4 @@
-package com.laughingFace.microWash.ui.plug.waterWaveProgress;
+package com.laughingface.smartlife.microwash.waterwaveprogress;
 
 import android.content.Context;
 

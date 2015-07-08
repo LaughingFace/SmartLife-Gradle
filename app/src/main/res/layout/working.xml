@@ -14,7 +14,7 @@
                   android:id="@+id/content">
 
         <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
-            <com.laughingFace.microWash.ui.plug.waterWaveProgress.WaterWaveProgress
+            <com.laughingface.smartlife.microwash.waterwaveprogress.WaterWaveProgress
                     android:gravity="center"
                     android:layout_width="300dp"
                     android:layout_height="300dp"

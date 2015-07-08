@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/circularfloatingactionmenu" />
             <option value="$PROJECT_DIR$/fabbutton" />
+            <option value="$PROJECT_DIR$/waterwaveprogress" />
           </set>
         </option>
       </GradleProjectSettings>

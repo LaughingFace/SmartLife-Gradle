@@ -1,10 +1,14 @@
-package com.laughingFace.microWash.ui.plug.waterWaveProgress;
+package com.laughingface.smartlife.microwash.waterwaveprogress;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
-import android.graphics.*;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.Path;
 import android.graphics.Path.Direction;
+import android.graphics.Point;
+import android.graphics.RectF;
 import android.graphics.Region.Op;
 import android.os.Build.VERSION;
 import android.os.Build.VERSION_CODES;
@@ -12,7 +16,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.AttributeSet;
 import android.view.View;
-import com.laughingFace.microWash.util.Log;
 
 import java.lang.ref.WeakReference;
 

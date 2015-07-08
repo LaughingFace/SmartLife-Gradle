@@ -1,10 +1,9 @@
-package com.laughingFace.microWash.ui.plug.waterWaveProgress;
+package com.laughingface.smartlife.microwash.waterwaveprogress;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
-import com.laughingFace.microWash.R;
 
 public class WaterWaveAttrInit {
 

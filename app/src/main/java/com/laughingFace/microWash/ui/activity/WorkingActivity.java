@@ -13,10 +13,10 @@ import com.laughingFace.microWash.deviceControler.devicesDispatcher.ModelManager
 import com.laughingFace.microWash.deviceControler.model.Model;
 import com.laughingFace.microWash.deviceControler.model.ModelAngel;
 import com.laughingFace.microWash.deviceControler.model.ModelProvider;
-import com.laughingFace.microWash.ui.plug.waterWaveProgress.WaterWaveProgress;
 import com.laughingFace.microWash.ui.view.SlidingMenu;
 import com.laughingFace.microWash.ui.view.WheelTimePicker;
 import com.laughingFace.microWash.util.Settings;
+import com.laughingface.smartlife.microwash.waterwaveprogress.WaterWaveProgress;
 
 import java.util.ArrayList;
 import java.util.List;
