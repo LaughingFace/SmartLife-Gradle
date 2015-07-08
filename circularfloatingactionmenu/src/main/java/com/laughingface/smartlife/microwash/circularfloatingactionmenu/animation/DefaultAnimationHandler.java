@@ -1,16 +1,19 @@
 /*
  *   Copyright 2014 Oguz Bilgener
  */
-package com.laughingFace.microWash.ui.plug.CircularFloatingActionMenu.animation;
+package com.laughingface.smartlife.microwash.circularfloatingactionmenu.animation;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
+import android.annotation.TargetApi;
 import android.graphics.Point;
+import android.os.Build;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.OvershootInterpolator;
-import com.laughingFace.microWash.ui.plug.CircularFloatingActionMenu.FloatingActionMenu;
+
+import com.laughingface.smartlife.microwash.circularfloatingactionmenu.FloatingActionMenu;
 
 
 /**
@@ -30,6 +33,7 @@ public class DefaultAnimationHandler extends MenuAnimationHandler {
         setAnimating(false);
     }
 
+    @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     @Override
     public void animateMenuOpening(Point center) {
         super.animateMenuOpening(center);
@@ -69,6 +73,7 @@ public class DefaultAnimationHandler extends MenuAnimationHandler {
 
     }
 
+    @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     @Override
     public void animateMenuClosing(Point center) {
         super.animateMenuOpening(center);

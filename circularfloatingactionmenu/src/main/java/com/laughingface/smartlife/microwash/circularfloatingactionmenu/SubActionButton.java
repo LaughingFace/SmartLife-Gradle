@@ -1,16 +1,14 @@
 /*
  *   Copyright 2014 Oguz Bilgener
  */
-package com.laughingFace.microWash.ui.plug.CircularFloatingActionMenu;
+package com.laughingface.smartlife.microwash.circularfloatingactionmenu;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.FrameLayout;
-import com.laughingFace.microWash.R;
 
 /**
  * A simple button implementation with a similar look an feel to{@link FloatingActionButton}.

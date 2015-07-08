@@ -1,9 +1,9 @@
 package com.laughingFace.microWash.ui.activity.utils;
 
 import android.graphics.Rect;
-import com.laughingFace.microWash.ui.plug.CircularFloatingActionMenu.FloatingActionMenu;
 import com.laughingFace.microWash.util.Log;
 import com.laughingFace.microWash.util.ScreenUtil;
+import com.laughingface.smartlife.microwash.circularfloatingactionmenu.FloatingActionMenu;
 
 /**
  * Created by mathcoder23 on 15-6-23.

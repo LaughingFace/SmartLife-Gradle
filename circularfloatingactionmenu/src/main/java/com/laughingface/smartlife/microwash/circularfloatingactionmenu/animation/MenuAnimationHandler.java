@@ -1,14 +1,15 @@
 /*
  *   Copyright 2014 Oguz Bilgener
  */
-package com.laughingFace.microWash.ui.plug.CircularFloatingActionMenu.animation;
+package com.laughingface.smartlife.microwash.circularfloatingactionmenu.animation;
 
 import android.animation.Animator;
 import android.graphics.Point;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
-import com.laughingFace.microWash.ui.plug.CircularFloatingActionMenu.FloatingActionMenu;
+
+import com.laughingface.smartlife.microwash.circularfloatingactionmenu.FloatingActionMenu;
 
 
 /**

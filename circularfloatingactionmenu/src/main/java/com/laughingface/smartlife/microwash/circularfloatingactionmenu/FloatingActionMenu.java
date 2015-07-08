@@ -1,7 +1,7 @@
 /*
  *   Copyright 2014 Oguz Bilgener
  */
-package com.laughingFace.microWash.ui.plug.CircularFloatingActionMenu;
+package com.laughingface.smartlife.microwash.circularfloatingactionmenu;
 
 import android.app.Activity;
 import android.content.Context;
@@ -20,9 +20,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
-import com.laughingFace.microWash.R;
-import com.laughingFace.microWash.ui.plug.CircularFloatingActionMenu.animation.DefaultAnimationHandler;
-import com.laughingFace.microWash.ui.plug.CircularFloatingActionMenu.animation.MenuAnimationHandler;
+
+import com.laughingface.smartlife.microwash.circularfloatingactionmenu.animation.DefaultAnimationHandler;
+import com.laughingface.smartlife.microwash.circularfloatingactionmenu.animation.MenuAnimationHandler;
 
 import java.util.ArrayList;
 import java.util.List;
