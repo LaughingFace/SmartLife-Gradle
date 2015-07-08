@@ -1,4 +1,4 @@
-package com.laughingFace.microWash.ui.plug.Kurt.Mbanje.FabButton;/*
+package com.laughingface.smartlife.microwash.fabbutton;/*
  * The MIT License (MIT)
  *
  * Copyright (c) 2015 Kurt Mbanje
@@ -28,21 +28,25 @@ import android.animation.ObjectAnimator;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.*;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.TransitionDrawable;
 import android.os.Build;
+import android.support.annotation.NonNull;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
-import com.laughingFace.microWash.R;
 
 
 public class CircleImageView extends ImageView {
 
     public interface OnFabViewListener {
-        public void onProgressVisibilityChanged(boolean visible);
-        public void onProgressCompleted();
+        void onProgressVisibilityChanged(boolean visible);
+        void onProgressCompleted();
     }
 
     private static final int animationDuration = 200;
@@ -162,7 +166,7 @@ public class CircleImageView extends ImageView {
     }
 
     @Override
-    protected void onDraw(Canvas canvas) {
+    protected void onDraw(@NonNull Canvas canvas) {
         final float ringR = ringRadius + currentRingWidth;
         canvas.drawCircle(centerX, centerY, ringR, ringPaint); // the outer ring
         canvas.drawCircle(centerX, centerY, circleRadius, circlePaint); //the actual circle

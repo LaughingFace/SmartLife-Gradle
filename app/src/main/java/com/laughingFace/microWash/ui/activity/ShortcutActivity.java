@@ -16,11 +16,11 @@ import com.laughingFace.microWash.deviceControler.model.Model;
 import com.laughingFace.microWash.deviceControler.model.ModelAngel;
 import com.laughingFace.microWash.deviceControler.model.ModelProvider;
 import com.laughingFace.microWash.ui.activity.utils.ShorcutMenuDirection;
-import com.laughingFace.microWash.ui.plug.Kurt.Mbanje.FabButton.FabButton;
 import com.laughingFace.microWash.util.Log;
 import com.laughingFace.microWash.util.ScreenUtil;
 import com.laughingFace.microWash.util.Settings;
 import com.laughingface.smartlife.microwash.circularfloatingactionmenu.FloatingActionMenu;
+import com.laughingface.smartlife.microwash.fabbutton.FabButton;
 
 /**
  * Created by zihao on 15-6-15.

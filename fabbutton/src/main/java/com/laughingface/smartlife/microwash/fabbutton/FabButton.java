@@ -1,4 +1,4 @@
-package com.laughingFace.microWash.ui.plug.Kurt.Mbanje.FabButton;/*
+package com.laughingface.smartlife.microwash.fabbutton;/*
  * The MIT License (MIT)
  *
  * Copyright (c) 2015 Kurt Mbanje
@@ -28,7 +28,6 @@ import android.graphics.Color;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
-import com.laughingFace.microWash.R;
 
 
 /**
@@ -83,7 +82,7 @@ public class FabButton extends FrameLayout implements CircleImageView.OnFabViewL
             animDuration = a.getInteger(R.styleable.CircleImageView_android_indeterminateDuration, animDuration);
             icon = a.getResourceId(R.styleable.CircleImageView_android_src,icon);
             ringWidthRatio = a.getFloat(R.styleable.CircleImageView_fbb_progressWidthRatio, ringWidthRatio);
-            endBitmapResource = a.getResourceId(R.styleable.CircleImageView_fbb_endBitmap, R.mipmap.ic_fab_complete);
+            endBitmapResource = a.getResourceId(R.styleable.CircleImageView_fbb_endBitmap, R.drawable.ic_fab_complete);
             showEndBitmap = a.getBoolean(R.styleable.CircleImageView_fbb_showEndBitmap,false);
             hideProgressOnComplete = a.getBoolean(R.styleable.CircleImageView_fbb_hideProgressOnComplete, false);
 

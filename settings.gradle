@@ -1,1 +1,1 @@
-include ':app', ':circularfloatingactionmenu'
+include ':app', ':circularfloatingactionmenu', ':fabbutton'

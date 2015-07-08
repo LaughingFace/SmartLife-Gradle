@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res/com.laughingFace.microWash"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
@@ -12,13 +12,7 @@
                   android:layout_height="wrap_content"
                   android:id="@+id/layout"
                   android:orientation="horizontal">
-        <!--<ImageButton android:layout_width="match_parent"
-                     android:layout_height="match_parent"
-                     android:background="@drawable/ic_launcher_circle"
-                     android:layout_gravity="center"
-                     android:id="@+id/menuCenter"
-                />-->
-        <com.laughingFace.microWash.ui.plug.Kurt.Mbanje.FabButton.FabButton
+        <com.laughingface.smartlife.microwash.fabbutton.FabButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"

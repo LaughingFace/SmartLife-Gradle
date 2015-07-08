@@ -1,4 +1,4 @@
-package com.laughingFace.microWash.ui.plug.Kurt.Mbanje.FabButton;/*
+package com.laughingface.smartlife.microwash.fabbutton;/*
  * The MIT License (MIT)
  *
  * Copyright (c) 2015 Rahat Ahmed
@@ -36,11 +36,9 @@ import android.graphics.RectF;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.View;
-import com.laughingFace.microWash.R;
 
 
 public class ProgressRingView extends View implements FabUtil.OnFabValueCallback{
-    String TAG = ProgressRingView.class.getSimpleName();
     private Paint progressPaint;
     private int size = 0;
     private RectF bounds;

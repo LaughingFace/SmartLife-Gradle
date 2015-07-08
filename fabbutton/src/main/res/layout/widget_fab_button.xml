@@ -28,7 +28,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.laughingFace.microWash.ui.plug.Kurt.Mbanje.FabButton.CircleImageView
+    <com.laughingface.smartlife.microwash.fabbutton.CircleImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/fabbutton_circle"
@@ -37,10 +37,9 @@
         android:scaleType="center"
         />
 
-    <com.laughingFace.microWash.ui.plug.Kurt.Mbanje.FabButton.ProgressRingView
+    <com.laughingface.smartlife.microwash.fabbutton.ProgressRingView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         android:id="@+id/fabbutton_ring"
         android:indeterminate="false"
         android:progress="0"
@@ -48,4 +47,5 @@
         app:fbb_autoStart="false"
         android:layout_gravity="center"
         />
+
 </merge>

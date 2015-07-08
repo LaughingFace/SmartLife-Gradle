@@ -1,4 +1,4 @@
-package com.laughingFace.microWash.ui.plug.Kurt.Mbanje.FabButton;
+package com.laughingface.smartlife.microwash.fabbutton;
 
 import android.animation.AnimatorSet;
 import android.animation.ValueAnimator;
