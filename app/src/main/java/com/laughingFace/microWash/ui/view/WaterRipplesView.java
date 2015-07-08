@@ -6,10 +6,10 @@ package com.laughingFace.microWash.ui.view;
         import android.graphics.Paint;
         import android.os.Build;
         import android.util.AttributeSet;
-        import android.util.Log;
         import android.view.DragEvent;
         import android.view.MotionEvent;
         import android.view.View;
+
         import com.laughingFace.microWash.R;
         import com.laughingFace.microWash.util.ViewUtil;
 

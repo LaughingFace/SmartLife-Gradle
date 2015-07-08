@@ -12,13 +12,13 @@ import android.widget.RemoteViews;
 import android.widget.Toast;
 
 import com.laughingFace.microWash.R;
-import com.laughingFace.microWash.deviceControler.device.Device;
-import com.laughingFace.microWash.deviceControler.devicesDispatcher.DeviceMonitor;
-import com.laughingFace.microWash.deviceControler.devicesDispatcher.ModelManager;
-import com.laughingFace.microWash.deviceControler.model.Model;
-import com.laughingFace.microWash.deviceControler.model.ModelAngel;
-import com.laughingFace.microWash.deviceControler.model.ModelProvider;
 import com.laughingFace.microWash.util.Log;
+import com.laughingface.smartlife.microwash.devicecontroler.device.Device;
+import com.laughingface.smartlife.microwash.devicecontroler.devicesDispatcher.DeviceMonitor;
+import com.laughingface.smartlife.microwash.devicecontroler.devicesDispatcher.ModelManager;
+import com.laughingface.smartlife.microwash.devicecontroler.model.Model;
+import com.laughingface.smartlife.microwash.devicecontroler.model.ModelAngel;
+import com.laughingface.smartlife.microwash.devicecontroler.model.ModelProvider;
 import com.umeng.analytics.MobclickAgent;
 
 /**

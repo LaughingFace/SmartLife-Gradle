@@ -18,17 +18,11 @@ import android.widget.*;
 import android.widget.LinearLayout.LayoutParams;
 import com.laughingFace.microWash.FileOptions.HomeApCfg;
 import com.laughingFace.microWash.R;
-import com.laughingFace.microWash.deviceControler.device.Device;
-import com.laughingFace.microWash.deviceControler.devicesDispatcher.ModelManager;
-import com.laughingFace.microWash.net.NetworkManager;
-import com.laughingFace.microWash.net.UdpSocket;
 import com.laughingFace.microWash.receiver.WifiStateReceiver;
 import com.laughingFace.microWash.smartConnect.IoTManagerNative;
 import com.laughingFace.microWash.util.DisplayUtil;
 import com.laughingFace.microWash.util.wifi.WifiAdmin;
-import com.laughingFace.microWash.util.wifi.WifiCfg;
-
-
+import com.laughingface.smartlife.microwash.devicecontroler.device.Device;
 import java.util.ArrayList;
 import java.util.List;
 

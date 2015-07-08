@@ -10,16 +10,17 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.*;
+
 import com.laughingFace.microWash.R;
-import com.laughingFace.microWash.deviceControler.devicesDispatcher.ModelManager;
-import com.laughingFace.microWash.deviceControler.model.Model;
-import com.laughingFace.microWash.deviceControler.model.ModelAngel;
-import com.laughingFace.microWash.deviceControler.model.ModelProvider;
 import com.laughingFace.microWash.ui.activity.utils.ShorcutMenuDirection;
 import com.laughingFace.microWash.util.Log;
 import com.laughingFace.microWash.util.ScreenUtil;
 import com.laughingFace.microWash.util.Settings;
 import com.laughingface.smartlife.microwash.circularfloatingactionmenu.FloatingActionMenu;
+import com.laughingface.smartlife.microwash.devicecontroler.devicesDispatcher.ModelManager;
+import com.laughingface.smartlife.microwash.devicecontroler.model.Model;
+import com.laughingface.smartlife.microwash.devicecontroler.model.ModelAngel;
+import com.laughingface.smartlife.microwash.devicecontroler.model.ModelProvider;
 import com.laughingface.smartlife.microwash.fabbutton.FabButton;
 
 /**

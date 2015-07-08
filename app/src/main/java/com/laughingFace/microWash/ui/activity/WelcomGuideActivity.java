@@ -7,7 +7,6 @@ import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
-import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,8 +14,8 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
 import com.laughingFace.microWash.R;
-import com.laughingFace.microWash.util.Settings;
 
 import java.util.ArrayList;
 
@@ -24,7 +23,7 @@ import java.util.ArrayList;
  * @author dwtedx
  *	功能描述：主程序入口类,欢迎界面
  */
-public class WelcomGuideActivity extends Activity implements OnClickListener,OnPageChangeListener {
+public class WelcomGuideActivity extends Activity implements OnClickListener,ViewPager.OnPageChangeListener {
 	//定义ViewPager对象
 	private ViewPager viewPager;
 	

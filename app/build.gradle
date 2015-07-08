@@ -26,4 +26,5 @@ dependencies {
     compile project(':circularfloatingactionmenu')
     compile project(':fabbutton')
     compile project(':waterwaveprogress')
+    compile project(':devicecontroler')
 }

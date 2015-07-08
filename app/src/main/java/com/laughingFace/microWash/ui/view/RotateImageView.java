@@ -5,12 +5,12 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Build;
 import android.util.AttributeSet;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
+
 import com.laughingFace.microWash.R;
 
 /**

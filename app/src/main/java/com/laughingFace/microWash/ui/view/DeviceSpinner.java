@@ -2,7 +2,6 @@ package com.laughingFace.microWash.ui.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.*;
 
 import com.laughingFace.microWash.R;
-import com.laughingFace.microWash.deviceControler.device.Device;
+import com.laughingface.smartlife.microwash.devicecontroler.device.Device;
 
 import java.util.ArrayList;
 import java.util.List;

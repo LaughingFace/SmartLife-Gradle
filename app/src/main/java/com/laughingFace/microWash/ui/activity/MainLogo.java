@@ -14,10 +14,10 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.laughingFace.microWash.R;
-import com.laughingFace.microWash.deviceControler.device.Device;
-import com.laughingFace.microWash.deviceControler.devicesDispatcher.ModelManager;
 import com.laughingFace.microWash.ui.view.WaterRipplesView;
+import com.laughingface.smartlife.microwash.devicecontroler.devicesDispatcher.ModelManager;
 
 import java.util.ArrayList;
 import java.util.List;

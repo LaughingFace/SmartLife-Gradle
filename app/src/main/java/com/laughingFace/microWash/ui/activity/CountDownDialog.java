@@ -8,8 +8,8 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import com.laughingFace.microWash.R;
-import com.laughingFace.microWash.ui.view.RotateImageView;
 
 /**
  * Created by zihao on 15-5-18.

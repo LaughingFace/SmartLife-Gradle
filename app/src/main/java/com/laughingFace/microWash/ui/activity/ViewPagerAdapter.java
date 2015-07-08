@@ -3,7 +3,6 @@ package com.laughingFace.microWash.ui.activity;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
-
 import java.util.ArrayList;
 
 /**

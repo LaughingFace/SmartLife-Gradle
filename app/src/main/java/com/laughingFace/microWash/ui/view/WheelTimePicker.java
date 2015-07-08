@@ -3,9 +3,9 @@ package com.laughingFace.microWash.ui.view;
 import android.app.Dialog;
 import android.content.Context;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
 import com.laughingFace.microWash.R;
 
 import java.util.ArrayList;
