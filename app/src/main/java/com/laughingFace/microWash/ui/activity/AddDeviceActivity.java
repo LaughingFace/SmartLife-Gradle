@@ -48,7 +48,7 @@ public class AddDeviceActivity extends BaseActivity {
     private final int PROCESS_FINISH = 3;
     private boolean isConnecting = false;
     private boolean isHandler = false;
-    private  IoTManagerNative iot;
+//    private  IoTManagerNative iot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -339,8 +339,8 @@ public class AddDeviceActivity extends BaseActivity {
 //                            Log.i("haha", "重新连接原ap");
 //                        }
 //                    }).start();
-                     iot = new IoTManagerNative();
-                    iot.InitSmartConnection();
+//                     iot = new IoTManagerNative();
+//                    iot.InitSmartConnection();
 
                     String mac = "";
                     for (ScanResult wifi : wifiAdmin.getWifiList())
@@ -352,15 +352,15 @@ public class AddDeviceActivity extends BaseActivity {
                     }
                     Log.i("xixi", etSsid.getText().toString() +",pwd:"+
                             etPwd.getText().toString()+",mac:"+mac);
-                    iot.StartSmartConnection(etSsid.getText().toString(),
-                            etPwd.getText().toString(), "", (byte) 0);
+//                    iot.StartSmartConnection(etSsid.getText().toString(),
+//                            etPwd.getText().toString(), "", (byte) 0);
                     HomeApCfg.SaveHomeAp(etSsid.getText().toString(),
                             etPwd.getText().toString());
                     try {
                         Thread.sleep(60000);
                         if (!isSuccesful)
                         {
-                            iot.StopSmartConnection();
+//                            iot.StopSmartConnection();
                             wifiStateListener.OnDisConnected(PROCESS_FINISH);
                         }
 
@@ -406,7 +406,7 @@ public class AddDeviceActivity extends BaseActivity {
     @Override
     public void onLine(Device device) {
         isSuccesful = true;
-        iot.StopSmartConnection();
+//        iot.StopSmartConnection();
         wifiStateListener.OnConnected(PROCESS_FINISH);
         super.onLine(device);
     }

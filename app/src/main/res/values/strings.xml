@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">微洗</string>
     <string name="noConnect">未连接</string>
+    <string name="connect">已连接</string>
     <string name="conn_set">连接设置</string>
     <string name="not_found_device">添加设备</string>
     <string name="device_name">微洗</string>

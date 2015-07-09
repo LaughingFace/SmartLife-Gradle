@@ -25,6 +25,7 @@ public class ReceiverUdpPacketHandler {
             if (null == device)
             {
                 device = new Device();
+                device.setName("微洗");
                 //device.setName(MyApplication.getContext().getString(R.string.device_name));
             }
             deviceState.onLineDevice(device);

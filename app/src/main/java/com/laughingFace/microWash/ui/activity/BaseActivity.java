@@ -60,21 +60,21 @@ public class BaseActivity extends Activity implements DeviceMonitor {
     @Override
     public void onLine(Device device) {
         Log.i("xixi", "online");
-        Toast.makeText(this,"online",Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this,"online",Toast.LENGTH_SHORT).show();
 
     }
 
     @Override
     public void offLine() {
         Log.i("xixi", "offline");
-        Toast.makeText(this,"offline",Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this,"offline",Toast.LENGTH_SHORT).show();
 
     }
 
     @Override
     public void onModelStart(Model model, ModelAngel.StartType type) {
         Log.i("xixi", "start" + model.getStateCode());
-        Toast.makeText(this,"start:::"+type,Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this,"start:::"+type,Toast.LENGTH_SHORT).show();
         notification.tickerText=model.getName();
     }
 
@@ -126,7 +126,7 @@ public class BaseActivity extends Activity implements DeviceMonitor {
     @Override
     public void faillOnStart(Model model,ModelAngel.StartFaillType type) {
         Log.i("xixi","faillonstart"+type);
-        Toast.makeText(this,"fail on start "+type,Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this,"fail on start "+type,Toast.LENGTH_SHORT).show();
 
     }
 

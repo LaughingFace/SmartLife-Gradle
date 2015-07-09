@@ -11,6 +11,7 @@ import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.*;
 
+import com.laughingFace.microWash.PostmanTest.WifiVM;
 import com.laughingFace.microWash.R;
 import com.laughingFace.microWash.ui.activity.utils.ShorcutMenuDirection;
 import com.laughingFace.microWash.util.Log;
@@ -37,7 +38,18 @@ public class ShortcutActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    WifiVM wifi = new WifiVM(4544);
+                    wifi.start();
+                }catch(Exception e)
+                {
+                    Log.e("wifi","wifi vm deal");
+                }
+            }
+        }).start();
         /**
          * 若是第一次启动软件跳到欢迎界面
          */
