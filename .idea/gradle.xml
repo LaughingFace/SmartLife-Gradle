@@ -7,6 +7,17 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleHome" value="$USER_HOME$/install/gradle/gradle-2.4" />
         <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/circularfloatingactionmenu" />
+            <option value="$PROJECT_DIR$/connectionguide" />
+            <option value="$PROJECT_DIR$/devicecontroler" />
+            <option value="$PROJECT_DIR$/fabbutton" />
+            <option value="$PROJECT_DIR$/waterwaveprogress" />
+          </set>
+        </option>
       </GradleProjectSettings>
     </option>
   </component>
