@@ -27,4 +27,5 @@ dependencies {
     compile project(':fabbutton')
     compile project(':waterwaveprogress')
     compile project(':devicecontroler')
+    compile project(':connectionguide')
 }
