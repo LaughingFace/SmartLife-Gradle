@@ -141,8 +141,10 @@ public class CheckPower extends AnimationFragment {
 
         AnimatorSet plug_perform_animation = (AnimatorSet) AnimatorInflater
                 .loadAnimator(context, R.animator.check_power_plug_perform);
-        plug_perform_animation.setDuration(500);
+        plug_perform_animation.setDuration(700);
+        plug_perform_animation.setInterpolator(new AccelerateInterpolator());
         plug_perform_animation.setTarget(check_power_plug);
+        plug_perform_animation.setStartDelay(400);
         plug_perform_animation.start();
 
 
