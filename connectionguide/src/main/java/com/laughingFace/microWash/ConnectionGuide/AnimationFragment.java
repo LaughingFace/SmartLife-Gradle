@@ -1,5 +1,6 @@
 package com.laughingFace.microWash.ConnectionGuide;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 
 //import android.app.Fragment;
