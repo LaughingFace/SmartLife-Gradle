@@ -95,7 +95,7 @@
         android:layout_weight="40"/>
     <TextView
 
-        android:id="@+id/select_device_spinner"
+
         android:layout_width="250dp"
         android:layout_height="0dp"
         android:layout_weight="40"
@@ -111,9 +111,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="50"/>
-    <TextView
-
-        android:id="@+id/check_power_text"
+    <TextV
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="60"
@@ -127,7 +125,7 @@
         android:layout_weight="50"/>
     <TextView
 
-        android:id="@+id/check_power_finish"
+        android:id="@+id/route_config_finish"
         android:layout_gravity="center"
         android:layout_height="0dp"
         android:layout_width="150dp"
