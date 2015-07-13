@@ -5,7 +5,6 @@ import android.animation.AnimatorInflater;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
-import android.animation.ValueAnimator;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.os.Build;
@@ -16,10 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewPropertyAnimator;
-import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.AccelerateInterpolator;
-import android.view.animation.BounceInterpolator;
-import android.view.animation.LinearInterpolator;
 import android.view.animation.OvershootInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -153,10 +149,13 @@ public class CheckPower extends AnimationFragment {
         plug_perform_animation.setStartDelay(400);
         plug_perform_animation.start();
         plug_perform_animation.addListener(new AnimatorListenerAdapter() {
+            @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
             @Override
             public void onAnimationEnd(Animator animation) {
 
                 check_power_plug.setImageResource(R.mipmap.guide_page_check_power_plug_ratated);
+                ViewPropertyAnimator vpa = check_power_plug.animate();
+                vpa.setDuration(3).rotationX(0).scaleY(1).scaleX(1).start();
                 super.onAnimationEnd(animation);
             }
         });
