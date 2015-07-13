@@ -64,7 +64,8 @@ public class ConnectGuideActivity extends FragmentActivity implements AnimationF
     private void selectFragment(int i){
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
-
+//        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        transaction.setCustomAnimations(R.anim.fragment_in,R.anim.fragment_out);
         transaction.replace(R.id.id_content, fragmentList.get(i));
         transaction.commit();
     }

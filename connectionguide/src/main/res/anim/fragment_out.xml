@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
-    android:interpolator="@android:interpolator/linear"
-    android:valueFrom="0"
-    android:valueTo="2500"
-    android:valueType="floatType"
-    android:propertyName="X"
-    android:duration="2000"  />
+<set xmlns:android="http://schemas.android.com/apk/res/android" >
+    <translate android:fromXDelta="0%p" android:toXDelta="-100%p"
+        android:duration="500" />
+</set>
