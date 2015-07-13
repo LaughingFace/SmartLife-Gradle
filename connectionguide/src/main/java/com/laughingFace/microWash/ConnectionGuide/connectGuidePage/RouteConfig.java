@@ -83,8 +83,35 @@ public class RouteConfig extends AnimationFragment{
         ((AnimatorSet)childs.get(0)).getChildAnimations().get(1).setTarget(route_config_device_icon);
         childs.get(0).setDuration(2000);
 
+        /**
+         *箭头出场动画
+         */
+        ((AnimatorSet)childs.get(1)).getChildAnimations().get(0).setTarget(route_config_wifi_arrow);
+        ((AnimatorSet)childs.get(1)).getChildAnimations().get(1).setTarget(route_config_phone_arrow);
+        childs.get(1).setDuration(1000);
+
+        /**
+         *
+         */
+        AnimatorSet route_config_arrow_animation_wifi = (AnimatorSet) AnimatorInflater.loadAnimator(mContext, R.animator.route_config_arrow_animation);
+        route_config_arrow_animation_wifi.getChildAnimations().get(0).setTarget(route_config_wifi_arrow_up);
+        route_config_arrow_animation_wifi.getChildAnimations().get(1).setTarget(route_config_wifi_arrow_down);
+        route_config_arrow_animation_wifi.getChildAnimations().get(0).setDuration(1000).start();
+        route_config_arrow_animation_wifi.getChildAnimations().get(1).setDuration(1000).start();
+
+        AnimatorSet route_config_arrow_animation_phone = (AnimatorSet) AnimatorInflater.loadAnimator(mContext, R.animator.route_config_arrow_animation);
+        route_config_arrow_animation_phone.getChildAnimations().get(0).setTarget(route_config_phone_arrow_down);
+        route_config_arrow_animation_phone.getChildAnimations().get(1).setTarget(route_config_phone_arrow_up);
+        route_config_arrow_animation_phone.getChildAnimations().get(0).setDuration(1000).start();
+        route_config_arrow_animation_phone.getChildAnimations().get(1).setDuration(1000).start();
 
 
+        /**
+         *wifi和手机出场动画
+         */
+        ((AnimatorSet)childs.get(2)).getChildAnimations().get(0).setTarget(route_config_wifi_icon);
+        ((AnimatorSet)childs.get(2)).getChildAnimations().get(1).setTarget(route_config_phone);
+        childs.get(2).setDuration(1000);
 
 
         route_config_in_animation.start();
