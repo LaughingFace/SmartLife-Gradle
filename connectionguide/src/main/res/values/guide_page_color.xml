@@ -4,6 +4,7 @@
     <!--<color name="guide_page_check_power_theme"></color>-->
     <color name="guide_page_select_device_theme">#ff00aa</color>
     <color name="guide_page_route_config_theme">#ee9a69</color>
+    <color name="guide_page_start_connect_theme">#b8dc7c</color>
 
 
 </resources>

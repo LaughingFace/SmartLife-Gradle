@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentActivity;
 import com.laughingFace.microWash.ConnectionGuide.connectGuidePage.CheckPower;
 import com.laughingFace.microWash.ConnectionGuide.connectGuidePage.RouteConfig;
 import com.laughingFace.microWash.ConnectionGuide.connectGuidePage.SelectDevice;
+import com.laughingFace.microWash.ConnectionGuide.connectGuidePage.StartConnect;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +21,9 @@ public class ConnectGuideActivity extends FragmentActivity implements AnimationF
     private AnimationFragment mCheckPower;
 //    private AnimationFragment mSelectDevice;
     private AnimationFragment mRouteConfig;
+    private AnimationFragment mStartConnect;
     private List<AnimationFragment> fragmentList;
+
     private int index = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +41,7 @@ public class ConnectGuideActivity extends FragmentActivity implements AnimationF
     @Override
     public void onBackPressed() {
 //        super.onBackPressed();
-        selectFragment(++index%2);
+        selectFragment(++index%fragmentList.size());
     }
 
     private void initFragment()
@@ -48,9 +51,12 @@ public class ConnectGuideActivity extends FragmentActivity implements AnimationF
         mCheckPower = new CheckPower();
 //        mSelectDevice = new SelectDevice();
         mRouteConfig = new RouteConfig();
+        mStartConnect = new StartConnect();
+
         fragmentList.add(mCheckPower);
 //        fragmentList.add(mSelectDevice);
         fragmentList.add(mRouteConfig);
+        fragmentList.add(mStartConnect);
     }
     private void selectFragment(int i){
         FragmentManager fm = getSupportFragmentManager();

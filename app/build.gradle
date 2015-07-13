@@ -1,21 +1,34 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'weixi'
+            keyPassword '15514weixi'
+            storeFile file('/home/mathcoder23/compary/android/app/SmartLife/microWash/doc/laughingface.keystore')
+            storePassword '15514face'
+        }
+    }
     compileSdkVersion 21
     buildToolsVersion "23.0.0 rc2"
-
     defaultConfig {
         applicationId "com.laughingFace.microWash"
         minSdkVersion 11
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
+        signingConfig signingConfigs.config
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        debug {
+            signingConfig signingConfigs.config
+        }
+    }
+    productFlavors {
     }
 }
 
