@@ -194,8 +194,6 @@ public class RouteConfig extends AnimationFragment{
         deviceOutAnimation.setStartDelay(4400);
         deviceOutAnimation.start();
 
-
-
     }
 
     @Override
