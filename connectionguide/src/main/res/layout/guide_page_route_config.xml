@@ -108,6 +108,7 @@
         android:layout_height="0dp"
         android:layout_weight="50"/>
     <TextView
+        android:id="@+id/route_config_hint"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="60"
