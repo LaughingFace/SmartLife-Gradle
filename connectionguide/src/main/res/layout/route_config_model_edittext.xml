@@ -10,22 +10,20 @@
         android:id="@+id/route_config_ssid_hint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textColor="#ffffff"
+        style="@style/guide_page_text_normal"
         android:text="@string/guide_page_route_config_ssid_hint"/>
     <TextView
         android:id="@+id/route_config_edittext_ssid_cursor"
         android:layout_toRightOf="@id/route_config_ssid_hint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textColor="#ffffff"
+        style="@style/guide_page_text_normal"
         android:text="@string/guide_page_route_config_text_split"/>
 
     <EditText
         android:focusable="false"
         android:background="#00ffffff"
-        android:textSize="20sp"
+        style="@style/guide_page_text_normal"
         android:layout_alignBottom="@id/route_config_ssid_hint"
         android:layout_toRightOf="@id/route_config_edittext_ssid_cursor"
         android:layout_width="match_parent"
@@ -44,8 +42,7 @@
         android:layout_below="@id/route_config_edittext_split"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textColor="#ffffff"
+        style="@style/guide_page_text_normal"
         android:text="@string/guide_page_route_config_pwd_hint"/>
     <TextView
         android:id="@+id/route_config_edittext_pwd_cursor"
@@ -53,13 +50,12 @@
         android:layout_below="@id/route_config_edittext_split"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textColor="#ffffff"
+        style="@style/guide_page_text_normal"
         android:text="@string/guide_page_route_config_text_split"/>
     <EditText
         android:focusable="false"
         android:background="#00ffffff"
-        android:textSize="20sp"
+        style="@style/guide_page_text_normal"
         android:layout_alignBottom="@id/route_config_pwd_hint"
         android:id="@+id/route_config_edittext_pwd"
         android:layout_below="@id/route_config_edittext_split"

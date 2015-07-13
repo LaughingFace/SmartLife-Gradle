@@ -65,21 +65,18 @@
         android:layout_height="0dp"
         android:layout_weight="70"/>
     <TextView
-
         android:id="@+id/start_connect_hint"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="60"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:textColor="@android:color/holo_blue_dark"
+        style="@style/guide_page_text_hint"
         android:text="@string/guide_page_start_connect_hint"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="20"/>
     <TextView
-
+        style="@style/guide_page_text_normal"
         android:id="@+id/start_connect_finish"
         android:layout_gravity="center"
         android:layout_height="0dp"

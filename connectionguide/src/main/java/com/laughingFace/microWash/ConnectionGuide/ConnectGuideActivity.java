@@ -6,6 +6,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.view.Window;
+
 import com.laughingFace.microWash.ConnectionGuide.connectGuidePage.CheckPower;
 import com.laughingFace.microWash.ConnectionGuide.connectGuidePage.RouteConfig;
 import com.laughingFace.microWash.ConnectionGuide.connectGuidePage.SelectDevice;
@@ -28,6 +30,7 @@ public class ConnectGuideActivity extends FragmentActivity implements AnimationF
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.hehe);
         try{
             initFragment();

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="@color/guide_page_bk"
     android:orientation="vertical"
     >
     <FrameLayout
@@ -16,7 +15,6 @@
             android:layout_gravity="center"
             android:layout_width="250dp"
             android:layout_height="250dp"
-
             android:background="@drawable/guide_page_check_power_circle"/>
         <ImageView
             android:id="@+id/check_power_socket"
@@ -24,10 +22,8 @@
             android:layout_gravity="center"
             android:layout_width="120dp"
             android:layout_height="120dp"
-
             android:src="@mipmap/guide_page_check_power_socket"/>
         <ImageView
-
                 android:id="@+id/check_power_plug"
                 android:layout_gravity="center"
                 android:layout_width="130dp"
@@ -41,14 +37,11 @@
         android:layout_height="0dp"
         android:layout_weight="70"/>
     <TextView
-
         android:id="@+id/check_power_text"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="60"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:textColor="@android:color/holo_blue_dark"
+        style="@style/guide_page_text_hint"
         android:text="@string/guidePage_check_power_hint"/>
     <View
         android:layout_width="match_parent"
@@ -63,6 +56,7 @@
         android:layout_weight="40"
         android:gravity="center"
         android:background="@drawable/guide_page_check_power_btn"
+        style="@style/guide_page_text_normal"
         android:text="@string/guidePage_check_power_btn"/>
 
     <View
