@@ -63,22 +63,22 @@ public class CheckPower extends AnimationFragment {
         return view;
     }
 
-    public void test(){
-
-        AnimatorSet as = (AnimatorSet) AnimatorInflater.loadAnimator(context,R.animator.test);
-
-        as.getChildAnimations().get(0).setTarget(check_power_finish);
-        as.getChildAnimations().get(0).setDuration(2000);
-        //as.getChildAnimations().get(0).start();
-
-        as.getChildAnimations().get(1).setTarget(check_power_text);
-        as.getChildAnimations().get(1).setDuration(5000);
-        //as.getChildAnimations().get(1).start();
-
-//        as.setTarget(check_power_finish);
-        as.start();
-
-    }
+//    public void test(){
+//
+//        AnimatorSet as = (AnimatorSet) AnimatorInflater.loadAnimator(context,R.animator.test);
+//
+//        as.getChildAnimations().get(0).setTarget(check_power_finish);
+//        as.getChildAnimations().get(0).setDuration(2000);
+//        //as.getChildAnimations().get(0).start();
+//
+//        as.getChildAnimations().get(1).setTarget(check_power_text);
+//        as.getChildAnimations().get(1).setDuration(5000);
+//        //as.getChildAnimations().get(1).start();
+//
+////        as.setTarget(check_power_finish);
+//        as.start();
+//
+//    }
 
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR1)

@@ -23,6 +23,7 @@
         android:text="@string/guide_page_route_config_text_split"/>
 
     <EditText
+        android:focusable="false"
         android:background="#00ffffff"
         android:textSize="20sp"
         android:layout_alignBottom="@id/route_config_ssid_hint"
@@ -56,6 +57,7 @@
         android:textColor="#ffffff"
         android:text="@string/guide_page_route_config_text_split"/>
     <EditText
+        android:focusable="false"
         android:background="#00ffffff"
         android:textSize="20sp"
         android:layout_alignBottom="@id/route_config_pwd_hint"
