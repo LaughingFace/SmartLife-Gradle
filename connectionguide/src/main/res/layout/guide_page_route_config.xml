@@ -30,21 +30,21 @@
         <FrameLayout
             android:id="@+id/route_config_phone_arrow"
             android:layout_gravity="center"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginLeft="-10dp"
             android:layout_marginTop="30dp"
 
             >
             <ImageView android:id="@+id/route_config_phone_arrow_up"
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_width="30dp"
                 android:layout_gravity="center"
                 android:src="@mipmap/guide_page_arrow1"
                 />
             <ImageView android:id="@+id/route_config_phone_arrow_down"
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_width="30dp"
                 android:layout_gravity="center"
                 android:src="@mipmap/guide_page_arrow2"
                 />
@@ -53,21 +53,21 @@
         <FrameLayout
             android:id="@+id/route_config_wifi_arrow"
             android:layout_gravity="center"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginLeft="-10dp"
             android:layout_marginTop="-70dp"
             android:rotation="85"
             >
             <ImageView android:id="@+id/route_config_wifi_arrow_up"
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_width="30dp"
                 android:layout_gravity="center"
                 android:src="@mipmap/guide_page_arrow1"
                 />
             <ImageView android:id="@+id/route_config_wifi_arrow_down"
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_width="30dp"
                 android:layout_gravity="center"
                 android:src="@mipmap/guide_page_arrow2"
                 />
