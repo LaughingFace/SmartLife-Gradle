@@ -74,7 +74,6 @@
 
         </FrameLayout>
         <ImageView
-            android:alpha="0"
             android:id="@+id/route_config_wifi_icon"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -83,7 +82,6 @@
             android:layout_gravity="center"
             android:src="@mipmap/guide_page_wifi_icon"/>
         <ImageView
-            android:alpha="0"
             android:id="@+id/route_config_phone"
             android:layout_marginTop="100dp"
             android:layout_marginLeft="70dp"
@@ -109,6 +107,7 @@
         android:layout_weight="50"/>
     <TextView
         android:id="@+id/route_config_hint"
+        android:transformPivotX="0dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="60"

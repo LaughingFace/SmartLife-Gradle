@@ -54,9 +54,9 @@
 
             android:id="@+id/start_connect_phone"
             android:layout_gravity="center"
-            android:layout_width="130dp"
-            android:layout_height="300dp"
-            android:layout_marginTop="150dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="120dp"
             android:src="@mipmap/guide_page_phone" />
 
     </FrameLayout>
