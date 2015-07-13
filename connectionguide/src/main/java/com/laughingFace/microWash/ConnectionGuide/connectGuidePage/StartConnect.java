@@ -55,6 +55,7 @@ public class StartConnect extends AnimationFragment{
             @Override
             public void onClick(View view) {
                 animationIn();
+                animationPerform();
                 animationOut();
                 start_connect_circle.setVisibility(View.VISIBLE);
                 start_connect_device.setVisibility(View.VISIBLE);
@@ -93,15 +94,22 @@ public class StartConnect extends AnimationFragment{
     @Override
     public void animationOut() {
 
-        start_connect_circle.animate().setStartDelay(4000).translationY(100).scaleX(10).scaleY(10).setDuration(1000).start();
-        start_connect_phone.animate().setStartDelay(4000).alpha(0).scaleX(0).scaleY(0).setDuration(1000).start();
-        start_connect_device.animate().setStartDelay(4000).alpha(0).scaleX(0).scaleY(0).setDuration(1000).start();
-        start_connect_hint.animate().setStartDelay(4000).alpha(0).scaleX(0).scaleY(0).setDuration(1000).start();
+        start_connect_circle.animate().setStartDelay(4000).translationY(100).scaleX(10).scaleY(10).setDuration(1500).start();
+        start_connect_phone.animate().setStartDelay(4000).alpha(0).scaleX(0).scaleY(0).setDuration(1500).start();
+        start_connect_device.animate().setStartDelay(4000).alpha(0).scaleX(0).scaleY(0).setDuration(1500).start();
+        start_connect_hint.animate().setStartDelay(4000).alpha(0).scaleX(0).scaleY(0).setDuration(1500).start();
 
+        start_connect_wifi_icon.setVisibility(View.INVISIBLE);
     }
 
     @Override
     public void animationPerform() {
+        AnimatorSet start_connect_perform_animation = (AnimatorSet) AnimatorInflater.loadAnimator(mContext, R.animator.start_connect_perform_animation);
+        ArrayList<Animator> childs = start_connect_perform_animation.getChildAnimations();
+
+        start_connect_perform_animation.setDuration(1500).setTarget(start_connect_wifi_icon);
+        start_connect_perform_animation.setStartDelay(4000);
+        start_connect_perform_animation.start();
 
     }
 
