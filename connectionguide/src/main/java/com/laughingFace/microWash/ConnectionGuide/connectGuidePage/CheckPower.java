@@ -36,15 +36,12 @@ public class CheckPower extends AnimationFragment {
     TextView check_power_text;
     TextView check_power_finish;
 
-    public CheckPower( Context context) {
-        this.context = context;
-    }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             View view = inflater.inflate(R.layout.guide_page_check_power, container, false);
-
+        this.context = this.getActivity().getApplicationContext();
         check_power_circle = (ImageView) view.findViewById(R.id.check_power_circle);
         check_power_plug = (ImageView) view.findViewById(R.id.check_power_plug);
         check_power_socket = (ImageView) view.findViewById(R.id.check_power_socket);
@@ -95,7 +92,7 @@ public class CheckPower extends AnimationFragment {
             public void onAnimationEnd(Animator animation) {
                 check_power_circle.setVisibility(View.VISIBLE);
 
-                AnimatorSet circle_in_animation = (AnimatorSet) AnimatorInflater.loadAnimator(context,R.animator.check_power_circle_in);
+                AnimatorSet circle_in_animation = (AnimatorSet) AnimatorInflater.loadAnimator(context, R.animator.check_power_circle_in);
                 circle_in_animation.setTarget(check_power_circle);
                 circle_in_animation.setDuration(700);
                 //circle_in_animation.setInterpolator(new OvershootInterpolator());
@@ -110,7 +107,7 @@ public class CheckPower extends AnimationFragment {
                 //插头入场动画
                 /*ObjectAnimator.ofFloat(,"alpha",0,1)
                         .setDuration(4000).start();*/
-                AnimatorSet plug_in_animation = (AnimatorSet) AnimatorInflater.loadAnimator(context,R.animator.check_power_plug_in);
+                AnimatorSet plug_in_animation = (AnimatorSet) AnimatorInflater.loadAnimator(context, R.animator.check_power_plug_in);
                 plug_in_animation.setTarget(check_power_plug);
                 plug_in_animation.setStartDelay(1000);
                 plug_in_animation.start();

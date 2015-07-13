@@ -3,4 +3,8 @@
 
     <string name="guidePage_check_power_hint">将插头插上电源\n灯光闪烁提示</string>
     <string name="guidePage_check_power_btn">完成</string>
+
+    <string name="guidePage_select_device_spinner_hint">连接机型:</string>
+    <string name="guidePage_select_device_hint">手机wifi连接到微洗机</string>
+    <string name="guidePage_select_device_btn">完成</string>
 </resources>

@@ -10,7 +10,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="510"
+        android:layout_weight="530"
         >
         <ImageView
             android:id="@+id/select_device_circle"
@@ -32,12 +32,15 @@
             android:layout_width="30dp"
             android:layout_gravity="center"
             android:src="@mipmap/guide_page_arrow"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
          />
         <ImageView android:id="@+id/select_device_arrow2"
             android:layout_height="30dp"
             android:layout_width="30dp"
             android:rotation="180"
             android:layout_gravity="center"
+            android:visibility="gone"
             android:src="@mipmap/guide_page_arrow"
             />
         <ImageView
@@ -52,7 +55,25 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="70"/>
+        android:layout_weight="40"/>
+    <TextView
+
+        android:id="@+id/select_device_spinner"
+        android:layout_width="250dp"
+        android:layout_height="0dp"
+        android:layout_weight="40"
+        android:gravity="left|center_vertical"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:textColor="#ffffff"
+        android:text="@string/guidePage_select_device_spinner_hint"
+        android:background="@drawable/guide_page_select_device_spinner"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50"/>
     <TextView
 
         android:id="@+id/check_power_text"
@@ -62,11 +83,11 @@
         android:gravity="center"
         android:textSize="20sp"
         android:textColor="@android:color/holo_blue_dark"
-        android:text="@string/guidePage_check_power_hint"/>
+        android:text="@string/guidePage_select_device_hint"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="20"/>
+        android:layout_weight="50"/>
     <TextView
 
         android:id="@+id/check_power_finish"
@@ -75,8 +96,8 @@
         android:layout_width="150dp"
         android:layout_weight="40"
         android:gravity="center"
-        android:background="@drawable/guide_page_check_power_btn"
-        android:text="@string/guidePage_check_power_btn"/>
+        android:background="@drawable/guide_page_select_device_btn"
+        android:text="@string/guidePage_select_device_btn"/>
 
     <View
         android:layout_width="match_parent"
