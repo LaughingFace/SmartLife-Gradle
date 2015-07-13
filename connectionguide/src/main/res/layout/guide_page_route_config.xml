@@ -57,6 +57,7 @@
             android:layout_height="30dp"
             android:layout_marginLeft="-10dp"
             android:layout_marginTop="-70dp"
+            android:rotation="85"
             >
             <ImageView android:id="@+id/route_config_wifi_arrow_up"
                 android:layout_height="match_parent"
@@ -93,19 +94,12 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="40"/>
-    <TextView
-
-
+    <include
         android:layout_width="250dp"
         android:layout_height="0dp"
-        android:layout_weight="40"
-        android:gravity="left|center_vertical"
-        android:textSize="20sp"
+        android:layout_weight="100"
         android:layout_gravity="center_horizontal"
-        android:padding="10dp"
-        android:textColor="#ffffff"
-        android:text="@string/guidePage_select_device_spinner_hint"
-        android:background="@drawable/guide_page_select_device_spinner"
+        layout="@layout/route_config_model_edittext"
         />
     <View
         android:layout_width="match_parent"
@@ -118,19 +112,21 @@
         android:gravity="center"
         android:textSize="20sp"
         android:textColor="@android:color/holo_blue_dark"
-        android:text="@string/guidePage_select_device_hint"/>
+        android:text="@string/guide_page_route_config_hint"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="50"/>
     <TextView
+        android:focusable="true"
         android:id="@+id/route_config_finish"
         android:layout_gravity="center"
         android:layout_height="0dp"
         android:layout_width="150dp"
         android:layout_weight="40"
         android:gravity="center"
-        android:background="@drawable/guide_page_select_device_btn"
+        android:background="@drawable/guide_page_route_config_btn"
+        android:textColor="#ffffff"
         android:text="@string/guidePage_select_device_btn"/>
 
     <View

@@ -7,4 +7,10 @@
     <string name="guidePage_select_device_spinner_hint">连接机型:</string>
     <string name="guidePage_select_device_hint">手机wifi连接到微洗机</string>
     <string name="guidePage_select_device_btn">完成</string>
+
+    <string name="guide_page_route_config_ssid_hint">wifi名称</string>
+    <string name="guide_page_route_config_pwd_hint">wifi密码</string>
+    <string name="guide_page_route_config_text_split">:</string>
+    <string name="guide_page_route_config_hint">帮助微洗机连接到家庭wifi</string>
+    <string name="guide_page_route_config_btn">完成</string>
 </resources>
