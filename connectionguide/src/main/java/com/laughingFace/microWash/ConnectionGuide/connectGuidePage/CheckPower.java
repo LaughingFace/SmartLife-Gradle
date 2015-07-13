@@ -57,6 +57,7 @@ public class CheckPower extends AnimationFragment {
 
                 //animationIn();
                 animationPerform();
+                animationOut();
 
                 //check_power_text.setVisibility(View.VISIBLE);
             }
@@ -121,8 +122,31 @@ public class CheckPower extends AnimationFragment {
 
     }
 
+    @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     @Override
     public void animationOut() {
+
+        AnimatorSet circle_out_animation = (AnimatorSet) AnimatorInflater.loadAnimator(context,R.animator.check_power_circle_out);
+        circle_out_animation.setTarget(check_power_circle);
+        circle_out_animation.setDuration(1500).setStartDelay(3000);
+        circle_out_animation.start();
+
+        AnimatorSet plug_out_animation = (AnimatorSet) AnimatorInflater.loadAnimator(context,R.animator.check_power_plug_out);
+        plug_out_animation.setTarget(check_power_plug);
+        plug_out_animation.setDuration(1500).setStartDelay(3000);
+        plug_out_animation.start();
+
+        AnimatorSet socket_out_animation = (AnimatorSet) AnimatorInflater.loadAnimator(context,R.animator.check_power_plug_out);
+        socket_out_animation.setTarget(check_power_socket);
+        socket_out_animation.setDuration(1500).setStartDelay(3000);
+        socket_out_animation.start();
+        check_power_socket.animate().setDuration(1500).translationY(105).setStartDelay(3000).start();
+
+        check_power_text.animate().setDuration(300).setStartDelay(5000).translationY(-1000)
+                .scaleY(0).scaleX(0).start();
+        check_power_finish.animate().setDuration(300).setStartDelay(5300).translationY(-1000)
+                .scaleY(0).scaleX(0).start();
+
 
     }
 
