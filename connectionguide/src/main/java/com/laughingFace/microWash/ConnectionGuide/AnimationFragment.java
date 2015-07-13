@@ -12,4 +12,9 @@ public abstract class AnimationFragment extends Fragment {
     public abstract void animationIn();
     public abstract void animationOut();
     public abstract void animationPerform();
+    public abstract void setOnChangePage(OnChangePage onChangePage);
+    public interface OnChangePage{
+        void nextPage();
+        void previousPage();
+    }
 }

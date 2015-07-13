@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="#a3f3f3">
+    <LinearLayout
+
+        android:id="@+id/layout_canvas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/id_content"></FrameLayout>
+
+    </LinearLayout>
     <!--<fragment
         android:id="@+id/fram"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:name="com.laughingFace.microWash.ConnectionGuide.connectGuidePage.one"/>-->
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/id_content"></FrameLayout>
+
 </LinearLayout>

@@ -12,28 +12,29 @@
         android:layout_height="0dp"
         android:layout_weight="510">
         <ImageView
-            android:id="@+id/check_power_circle"
+            android:id="@+id/select_device_circle"
             android:layout_gravity="center"
             android:layout_width="250dp"
             android:layout_height="250dp"
 
-            android:background="@drawable/guide_page_check_power_circle"/>
+            android:background="@drawable/guide_page_select_device_circle"/>
         <ImageView
-            android:id="@+id/check_power_socket"
-            android:layout_marginTop="-45dp"
+            android:id="@+id/select_device_wifi_text"
+            android:layout_gravity="center"
+            android:layout_width="120dp"
+            android:rotation="60"
+            android:layout_height="180dp"
+            android:src="@mipmap/guide_page_wifi_text_icon" />
+        <ImageView
+            android:id="@+id/select_device_phone"
+            android:visibility="gone"
+            android:rotationX="60"
+            android:scaleType="centerInside"
             android:layout_gravity="center"
             android:layout_width="120dp"
             android:layout_height="120dp"
-
-            android:src="@mipmap/guide_page_check_power_socket"/>
-        <ImageView
-                android:id="@+id/check_power_plug"
-                android:layout_gravity="center"
-                android:layout_width="90dp"
-                android:layout_height="180dp"
-                android:layout_marginTop="150dp"
-                android:src="@mipmap/guide_page_check_power_plug" />
-
+            android:adjustViewBounds="true"
+            android:src="@mipmap/guide_page_phone"/>
     </FrameLayout>
     <View
         android:layout_width="match_parent"

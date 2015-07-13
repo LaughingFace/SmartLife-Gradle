@@ -13,6 +13,8 @@ import com.laughingface.smartlife.microwash.devicecontroler.device.Device;
 import com.laughingface.smartlife.microwash.devicecontroler.devicesDispatcher.ModelManager;
 import com.laughingface.smartlife.microwash.devicecontroler.model.Model;
 import com.laughingface.smartlife.microwash.devicecontroler.model.ModelAngel;
+import com.lidroid.xutils.view.annotation.ContentView;
+import com.lidroid.xutils.view.annotation.ViewInject;
 
 public class DeviceActivity extends BaseActivity{
     private ImageButton nextPage;

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="guide_page_bk"></color>-->
+    <!--<color name="guide_page_check_power_theme"></color>-->
+    <color name="guide_page_select_device_theme">#ff00aa</color>
+
+</resources>

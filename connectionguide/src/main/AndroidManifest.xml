@@ -10,6 +10,14 @@
             <action android:name="android.intent.action.MAIN"/>
             <category android:name="android.intent.category.LAUNCHER"/>
         </intent-filter></activity>
+        <activity
+            android:label="打印"
+            android:name="com.laughingFace.microWash.ConnectionGuide.TestCompatActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
