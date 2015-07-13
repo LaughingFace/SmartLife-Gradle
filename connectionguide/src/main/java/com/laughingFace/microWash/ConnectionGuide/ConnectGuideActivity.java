@@ -1,7 +1,5 @@
 package com.laughingFace.microWash.ConnectionGuide;
 
-import android.app.Activity;
-
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
@@ -10,7 +8,6 @@ import android.view.Window;
 
 import com.laughingFace.microWash.ConnectionGuide.connectGuidePage.CheckPower;
 import com.laughingFace.microWash.ConnectionGuide.connectGuidePage.RouteConfig;
-import com.laughingFace.microWash.ConnectionGuide.connectGuidePage.SelectDevice;
 import com.laughingFace.microWash.ConnectionGuide.connectGuidePage.StartConnect;
 
 import java.util.ArrayList;
@@ -65,7 +62,7 @@ public class ConnectGuideActivity extends FragmentActivity implements AnimationF
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
 //        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-        transaction.setCustomAnimations(R.anim.fragment_in,R.anim.fragment_out);
+        transaction.setCustomAnimations(R.anim.fragment_in_right,R.anim.fragment_out_left);
         transaction.replace(R.id.id_content, fragmentList.get(i));
         transaction.commit();
     }
