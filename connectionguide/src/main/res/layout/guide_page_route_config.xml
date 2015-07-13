@@ -111,7 +111,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="50"/>
-    <TextV
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="60"
@@ -124,7 +124,6 @@
         android:layout_height="0dp"
         android:layout_weight="50"/>
     <TextView
-
         android:id="@+id/route_config_finish"
         android:layout_gravity="center"
         android:layout_height="0dp"

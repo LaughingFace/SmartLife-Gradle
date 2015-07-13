@@ -30,11 +30,11 @@ public class CheckPower extends AnimationFragment {
 
     private Context context;
 
-    ImageView check_power_circle;
-    ImageView check_power_plug;
-    ImageView check_power_socket;
-    TextView check_power_text;
-    TextView check_power_finish;
+    View check_power_circle;
+    View check_power_plug;
+    View check_power_socket;
+    View check_power_text;
+    View check_power_finish;
 
 
     @Nullable
@@ -42,11 +42,11 @@ public class CheckPower extends AnimationFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             View view = inflater.inflate(R.layout.guide_page_check_power, container, false);
         this.context = this.getActivity().getApplicationContext();
-        check_power_circle = (ImageView) view.findViewById(R.id.check_power_circle);
-        check_power_plug = (ImageView) view.findViewById(R.id.check_power_plug);
-        check_power_socket = (ImageView) view.findViewById(R.id.check_power_socket);
-        check_power_text = (TextView) view.findViewById(R.id.check_power_text);
-        check_power_finish = (TextView) view.findViewById(R.id.check_power_finish);
+        check_power_circle =view.findViewById(R.id.check_power_circle);
+        check_power_plug = view.findViewById(R.id.check_power_plug);
+        check_power_socket = view.findViewById(R.id.check_power_socket);
+        check_power_text = view.findViewById(R.id.check_power_text);
+        check_power_finish = view.findViewById(R.id.check_power_finish);
 
         check_power_finish.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,12 +55,31 @@ public class CheckPower extends AnimationFragment {
                 //animationIn();
                 animationPerform();
                 animationOut();
+                //test();
 
                 //check_power_text.setVisibility(View.VISIBLE);
             }
         });
         return view;
     }
+
+    public void test(){
+
+        AnimatorSet as = (AnimatorSet) AnimatorInflater.loadAnimator(context,R.animator.test);
+
+        as.getChildAnimations().get(0).setTarget(check_power_finish);
+        as.getChildAnimations().get(0).setDuration(2000);
+        //as.getChildAnimations().get(0).start();
+
+        as.getChildAnimations().get(1).setTarget(check_power_text);
+        as.getChildAnimations().get(1).setDuration(5000);
+        //as.getChildAnimations().get(1).start();
+
+//        as.setTarget(check_power_finish);
+        as.start();
+
+    }
+
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR1)
     @Override
@@ -76,17 +95,11 @@ public class CheckPower extends AnimationFragment {
 
         AnimatorSet text_in_animation = (AnimatorSet) AnimatorInflater.loadAnimator(context,R.animator.check_power_text_in_animation);
         text_in_animation.setTarget(check_power_text);
-        text_in_animation.setDuration(1300);
-        text_in_animation.setStartDelay(200);
+        text_in_animation.setDuration(1300).setStartDelay(200);
 
         text_in_animation.start();
         finish_in_animation.start();
         text_in_animation.addListener(new AnimatorListenerAdapter() {
-            @Override
-            public void onAnimationStart(Animator animation) {
-
-                super.onAnimationStart(animation);
-            }
 
             @Override
             public void onAnimationEnd(Animator animation) {
@@ -95,7 +108,6 @@ public class CheckPower extends AnimationFragment {
                 AnimatorSet circle_in_animation = (AnimatorSet) AnimatorInflater.loadAnimator(context, R.animator.check_power_circle_in);
                 circle_in_animation.setTarget(check_power_circle);
                 circle_in_animation.setDuration(700);
-                //circle_in_animation.setInterpolator(new OvershootInterpolator());
 
                 AnimatorSet socket_in_animation = (AnimatorSet) AnimatorInflater.loadAnimator(context, R.animator.in_socket);
                 socket_in_animation.setTarget(check_power_socket);
@@ -105,8 +117,6 @@ public class CheckPower extends AnimationFragment {
                 circle_in_animation.start();
 
                 //插头入场动画
-                /*ObjectAnimator.ofFloat(,"alpha",0,1)
-                        .setDuration(4000).start();*/
                 AnimatorSet plug_in_animation = (AnimatorSet) AnimatorInflater.loadAnimator(context, R.animator.check_power_plug_in);
                 plug_in_animation.setTarget(check_power_plug);
                 plug_in_animation.setStartDelay(1000);
@@ -144,7 +154,6 @@ public class CheckPower extends AnimationFragment {
         check_power_finish.animate().setDuration(300).setStartDelay(5300).translationY(-1000)
                 .scaleY(0).scaleX(0).start();
 
-
     }
 
     @Override
@@ -174,7 +183,7 @@ public class CheckPower extends AnimationFragment {
             @Override
             public void onAnimationEnd(Animator animation) {
 
-                check_power_plug.setImageResource(R.mipmap.guide_page_check_power_plug_ratated);
+                ( (ImageView)check_power_plug).setImageResource(R.mipmap.guide_page_check_power_plug_ratated);
                 ViewPropertyAnimator vpa = check_power_plug.animate();
                 vpa.setDuration(3).rotationX(0).scaleY(1).scaleX(1).start();
                 super.onAnimationEnd(animation);
