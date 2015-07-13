@@ -10,7 +10,8 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="510">
+        android:layout_weight="510"
+        >
         <ImageView
             android:id="@+id/select_device_circle"
             android:layout_gravity="center"
@@ -19,21 +20,33 @@
 
             android:background="@drawable/guide_page_select_device_circle"/>
         <ImageView
+            android:layout_marginTop="-40dp"
+            android:layout_marginLeft="-40dp"
             android:id="@+id/select_device_wifi_text"
             android:layout_gravity="center"
-            android:layout_width="120dp"
-            android:rotation="60"
-            android:layout_height="180dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:src="@mipmap/guide_page_wifi_text_icon" />
+        <ImageView android:id="@+id/select_device_arrow1"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/guide_page_arrow"
+         />
+        <ImageView android:id="@+id/select_device_arrow2"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:rotation="180"
+            android:layout_gravity="center"
+            android:src="@mipmap/guide_page_arrow"
+            />
         <ImageView
             android:id="@+id/select_device_phone"
-            android:visibility="gone"
-            android:rotationX="60"
-            android:scaleType="centerInside"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="70dp"
             android:layout_gravity="center"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:adjustViewBounds="true"
             android:src="@mipmap/guide_page_phone"/>
     </FrameLayout>
     <View
