@@ -64,7 +64,7 @@ public class CheckPower extends AnimationFragment {
     }
 
     public void test(){
-
+/*
         AnimatorSet as = (AnimatorSet) AnimatorInflater.loadAnimator(context,R.animator.test);
 
         as.getChildAnimations().get(0).setTarget(check_power_finish);
@@ -76,7 +76,7 @@ public class CheckPower extends AnimationFragment {
         //as.getChildAnimations().get(1).start();
 
 //        as.setTarget(check_power_finish);
-        as.start();
+        as.start();*/
 
     }
 
