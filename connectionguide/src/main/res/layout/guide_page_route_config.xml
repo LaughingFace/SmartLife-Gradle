@@ -57,8 +57,8 @@
             android:layout_height="100dp"
             android:layout_marginLeft="-10dp"
             android:layout_marginTop="-70dp"
-            android:rotation="85"
-            >
+            android:rotation="85">
+
             <ImageView android:id="@+id/route_config_wifi_arrow_up"
                 android:layout_height="30dp"
                 android:layout_width="30dp"
