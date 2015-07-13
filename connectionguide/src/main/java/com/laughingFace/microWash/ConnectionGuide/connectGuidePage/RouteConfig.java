@@ -34,6 +34,8 @@ public class RouteConfig extends AnimationFragment{
     private View route_config_wifi_icon;
     private View route_config_phone;
     private View route_config_finish;
+    private View route_config_edittext;
+    private View route_config_hint;
 
 //    private View select_device_spinner;
 //    private View check_power_text;
@@ -56,15 +58,27 @@ public class RouteConfig extends AnimationFragment{
         route_config_wifi_arrow = view.findViewById(R.id.route_config_wifi_arrow);
         route_config_wifi_icon = view.findViewById(R.id.route_config_wifi_icon);
         route_config_phone = view.findViewById(R.id.route_config_phone);
+        route_config_edittext = view.findViewById(R.id.route_config_edittext);
         route_config_finish = view.findViewById(R.id.route_config_finish);
+        route_config_hint = view.findViewById(R.id.route_config_hint);
+
+        route_config_phone_arrow.setAlpha(0);
+        route_config_wifi_arrow.setAlpha(0);
+        route_config_wifi_icon.setAlpha(0);
+        route_config_phone.setAlpha(0);
+        route_config_edittext.setAlpha(0);
+        route_config_finish.setAlpha(0);
+        route_config_hint.setAlpha(0);
+
+        route_config_circle.setVisibility(View.INVISIBLE);
+        route_config_device_icon.setVisibility(View.INVISIBLE);
 
        route_config_finish.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
-               //route_config_wifi_arrow.setRotation(85);
                animationIn();
-
-
+               route_config_circle.setVisibility(View.VISIBLE);
+               route_config_device_icon.setVisibility(View.VISIBLE);
            }
        });
 
@@ -81,17 +95,17 @@ public class RouteConfig extends AnimationFragment{
          */
         ((AnimatorSet)childs.get(0)).getChildAnimations().get(0).setTarget(route_config_circle);
         ((AnimatorSet)childs.get(0)).getChildAnimations().get(1).setTarget(route_config_device_icon);
-        childs.get(0).setDuration(2000);
+        childs.get(0).setDuration(800);
 
         /**
          *箭头出场动画
          */
         ((AnimatorSet)childs.get(1)).getChildAnimations().get(0).setTarget(route_config_wifi_arrow);
         ((AnimatorSet)childs.get(1)).getChildAnimations().get(1).setTarget(route_config_phone_arrow);
-        childs.get(1).setDuration(1000);
+        childs.get(1).setDuration(400);
 
         /**
-         *
+         *箭头蠕动动画
          */
         AnimatorSet route_config_arrow_animation_wifi = (AnimatorSet) AnimatorInflater.loadAnimator(mContext, R.animator.route_config_arrow_animation);
         route_config_arrow_animation_wifi.getChildAnimations().get(0).setTarget(route_config_wifi_arrow_up);
@@ -107,12 +121,25 @@ public class RouteConfig extends AnimationFragment{
 
 
         /**
-         *wifi和手机出场动画
+         *wifi,文本框和手机出场动画
          */
         ((AnimatorSet)childs.get(2)).getChildAnimations().get(0).setTarget(route_config_wifi_icon);
         ((AnimatorSet)childs.get(2)).getChildAnimations().get(1).setTarget(route_config_phone);
+        ((AnimatorSet)childs.get(2)).getChildAnimations().get(2).setTarget(route_config_edittext);
         childs.get(2).setDuration(1000);
 
+        /**
+         * 完成 按钮出现动画
+         */
+        childs.get(3).setTarget(route_config_finish);
+        childs.get(3).setDuration(800);
+
+        /**
+         * 说明文字 出现动画
+         */
+        //route_config_hint.setPivotX(300);
+        childs.get(4).setTarget(route_config_hint);
+        childs.get(4).setDuration(3000);
 
         route_config_in_animation.start();
     }

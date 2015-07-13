@@ -5,7 +5,7 @@ android {
         config {
             keyAlias 'weixi'
             keyPassword '15514weixi'
-            storeFile file('/home/mathcoder23/compary/android/app/SmartLife/microWash/doc/laughingface.keystore')
+            storeFile file('doc/laughingface.keystore')
             storePassword '15514face'
         }
     }
