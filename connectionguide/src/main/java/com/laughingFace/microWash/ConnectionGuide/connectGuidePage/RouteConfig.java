@@ -100,8 +100,8 @@ public class RouteConfig extends AnimationFragment{
         route_config_arrow_animation_wifi.getChildAnimations().get(1).setDuration(1000).start();
 
         AnimatorSet route_config_arrow_animation_phone = (AnimatorSet) AnimatorInflater.loadAnimator(mContext, R.animator.route_config_arrow_animation);
-        route_config_arrow_animation_phone.getChildAnimations().get(0).setTarget(route_config_phone_arrow_down);
-        route_config_arrow_animation_phone.getChildAnimations().get(1).setTarget(route_config_phone_arrow_up);
+        route_config_arrow_animation_phone.getChildAnimations().get(0).setTarget(route_config_phone_arrow_up);
+        route_config_arrow_animation_phone.getChildAnimations().get(1).setTarget(route_config_phone_arrow_down);
         route_config_arrow_animation_phone.getChildAnimations().get(0).setDuration(1000).start();
         route_config_arrow_animation_phone.getChildAnimations().get(1).setDuration(1000).start();
 
