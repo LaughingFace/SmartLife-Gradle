@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import com.laughingFace.microWash.ConnectionGuide.connectGuidePage.CheckPower;
+import com.laughingFace.microWash.ConnectionGuide.connectGuidePage.RouteConfig;
 import com.laughingFace.microWash.ConnectionGuide.connectGuidePage.SelectDevice;
 
 import java.util.ArrayList;
@@ -17,7 +18,8 @@ import java.util.List;
  */
 public class ConnectGuideActivity extends FragmentActivity implements AnimationFragment.OnChangePage{
     private AnimationFragment mCheckPower;
-    private AnimationFragment mSelectDevice;
+//    private AnimationFragment mSelectDevice;
+    private AnimationFragment mRouteConfig;
     private List<AnimationFragment> fragmentList;
     private int index = 1;
     @Override
@@ -44,10 +46,11 @@ public class ConnectGuideActivity extends FragmentActivity implements AnimationF
         fragmentList = new ArrayList<>();
 
         mCheckPower = new CheckPower();
-        mSelectDevice = new SelectDevice();
-
+//        mSelectDevice = new SelectDevice();
+        mRouteConfig = new RouteConfig();
         fragmentList.add(mCheckPower);
-        fragmentList.add(mSelectDevice);
+//        fragmentList.add(mSelectDevice);
+        fragmentList.add(mRouteConfig);
     }
     private void selectFragment(int i){
         FragmentManager fm = getSupportFragmentManager();
