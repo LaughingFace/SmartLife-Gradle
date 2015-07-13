@@ -5,6 +5,7 @@ import android.animation.AnimatorInflater;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.os.Build;
@@ -60,6 +61,7 @@ public class CheckPower extends AnimationFragment {
 
                 //animationIn();
                 animationPerform();
+
                 //check_power_text.setVisibility(View.VISIBLE);
             }
         });
@@ -108,9 +110,13 @@ public class CheckPower extends AnimationFragment {
                 socket_in_animation.start();
                 circle_in_animation.start();
 
-                //插头显示动画
-                ObjectAnimator.ofFloat(check_power_plug,"alpha",0,1)
-                        .setDuration(4000).start();
+                //插头入场动画
+                /*ObjectAnimator.ofFloat(,"alpha",0,1)
+                        .setDuration(4000).start();*/
+                AnimatorSet plug_in_animation = (AnimatorSet) AnimatorInflater.loadAnimator(context,R.animator.check_power_plug_in);
+                plug_in_animation.setTarget(check_power_plug);
+                plug_in_animation.setStartDelay(1000);
+                plug_in_animation.start();
 
                 super.onAnimationEnd(animation);
             }
@@ -146,6 +152,14 @@ public class CheckPower extends AnimationFragment {
         plug_perform_animation.setTarget(check_power_plug);
         plug_perform_animation.setStartDelay(400);
         plug_perform_animation.start();
+        plug_perform_animation.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+
+                check_power_plug.setImageResource(R.mipmap.guide_page_check_power_plug_ratated);
+                super.onAnimationEnd(animation);
+            }
+        });
 
 
     }
