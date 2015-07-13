@@ -163,4 +163,10 @@ public class CheckPower extends AnimationFragment {
 
 
     }
+
+    OnChangePage onChangePage;
+    @Override
+    public void setOnChangePage(OnChangePage onChangePage) {
+       this.onChangePage = onChangePage;
+    }
 }
