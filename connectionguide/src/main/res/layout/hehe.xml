@@ -3,7 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
-    android:background="#a3f3f3">
+    android:background="@color/guide_page_bk">
     <LinearLayout
 
         android:id="@+id/layout_canvas"
@@ -12,8 +12,23 @@
         android:orientation="vertical">
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/id_content"></FrameLayout>
+            android:layout_height="match_parent">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/id_content_start_connect"></FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/id_content_route_confige"></FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/id_content_check_power"></FrameLayout>
+        </FrameLayout>
+
 
     </LinearLayout>
     <!--<fragment

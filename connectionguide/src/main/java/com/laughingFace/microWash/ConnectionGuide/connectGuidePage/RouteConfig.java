@@ -3,6 +3,7 @@ package com.laughingFace.microWash.ConnectionGuide.connectGuidePage;
 import android.animation.Animator;
 import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.os.Build;
@@ -12,6 +13,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.animation.BounceInterpolator;
+import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 
 import com.laughingFace.microWash.ConnectionGuide.AnimationFragment;
@@ -80,13 +83,19 @@ public class RouteConfig extends AnimationFragment{
        route_config_finish.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
-               animationIn();
-               animationOut();
-               route_config_circle.setVisibility(View.VISIBLE);
-               route_config_device_icon.setVisibility(View.VISIBLE);
+//               animationIn();
+//               animationOut();
+
+               if (null != mOnChangePage)
+                   mOnChangePage.nextPage(RouteConfig.this);
            }
        });
-
+        view.post(new Runnable() {
+            @Override
+            public void run() {
+                mOnChangePage.initFinished(RouteConfig.this);
+            }
+        });
         return view;
     }
 
@@ -147,6 +156,9 @@ public class RouteConfig extends AnimationFragment{
         childs.get(4).setDuration(250);
 
         route_config_in_animation.start();
+
+        route_config_circle.setVisibility(View.VISIBLE);
+        route_config_device_icon.setVisibility(View.VISIBLE);
     }
 
     @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
@@ -158,40 +170,47 @@ public class RouteConfig extends AnimationFragment{
 
         route_config_phone.animate().translationY(cir_centerY - (route_config_phone.getTop() + route_config_phone.getHeight()/2))
                 .translationX(cir_centerX -(route_config_phone.getLeft() + route_config_phone.getWidth()/2))
-                .scaleX(0).scaleY(0).setDuration(300).setStartDelay(4000).start();
+                .scaleX(0).scaleY(0).setDuration(300).setStartDelay(0).start();
 
         route_config_wifi_icon.animate().translationY(cir_centerY - (route_config_wifi_icon.getTop() + route_config_wifi_icon.getHeight()/2))
                 .translationX(cir_centerX -(route_config_wifi_icon.getLeft() + route_config_wifi_icon.getWidth()/2))
-                .scaleX(0).scaleY(0).setDuration(300).setStartDelay(4000).start();
+                .scaleX(0).scaleY(0).setDuration(300).setStartDelay(000).start();
 
         route_config_wifi_arrow.animate().translationY(cir_centerY - (route_config_wifi_arrow.getTop() + route_config_wifi_arrow.getHeight()/2))
                 .translationX(cir_centerX -(route_config_wifi_arrow.getLeft() + route_config_wifi_arrow.getWidth()/2))
-                .scaleX(0).scaleY(0).setDuration(300).setStartDelay(4000).start();
+                .scaleX(0).scaleY(0).setDuration(300).setStartDelay(000).start();
 
         route_config_phone_arrow.animate().translationY(cir_centerY - (route_config_phone_arrow.getTop() + route_config_phone_arrow.getHeight()/2))
                 .translationX(cir_centerX -(route_config_phone_arrow.getLeft() + route_config_phone_arrow.getWidth()/2))
-                .scaleX(0).scaleY(0).setDuration(300).setStartDelay(4000).start();
+                .scaleX(0).scaleY(0).setDuration(300).setStartDelay(000).start();
 
         route_config_edittext.animate().translationY(cir_centerY - (route_config_edittext.getTop() + route_config_edittext.getHeight()/2))
                 .translationX(cir_centerX -(route_config_edittext.getLeft() + route_config_edittext.getWidth()/2))
-                .scaleX(0).scaleY(0).setDuration(300).setStartDelay(4000).start();
+                .scaleX(0).scaleY(0).setDuration(300).setStartDelay(000).start();
 
         route_config_hint.animate().translationY(cir_centerY - (route_config_hint.getTop() + route_config_hint.getHeight()/2))
                 .translationX(cir_centerX -(route_config_hint.getLeft() + route_config_hint.getWidth()/2))
-                .scaleX(0).scaleY(0).setDuration(300).setStartDelay(4000).start();
+                .scaleX(0).scaleY(0).setDuration(300).setStartDelay(000).start();
 
-        route_config_finish.animate().translationY(cir_centerY - (route_config_finish.getTop() + route_config_finish.getHeight()/2))
-                .translationX(cir_centerX - (route_config_finish.getLeft() + route_config_finish.getWidth() / 2))
-                .scaleX(0).scaleY(0).setDuration(300).setStartDelay(4000).start();
+        ObjectAnimator.ofFloat(route_config_finish, "translationY", 0, cir_centerY - (route_config_finish.getTop() + route_config_finish.getHeight() / 2)).setDuration(300).start();
+        ObjectAnimator.ofFloat(route_config_finish, "translationX", 0, cir_centerX - (route_config_finish.getLeft() + route_config_finish.getWidth() / 2)).setDuration(300).start();
+        ObjectAnimator.ofFloat(route_config_finish, "scaleY", 1, 0.1f).setDuration(300).start();
+        ObjectAnimator.ofFloat(route_config_finish, "scaleX", 1, 0.1f).setDuration(300).start();
+        ObjectAnimator.ofFloat(route_config_finish, "alpha", 1, 0).setDuration(300).start();
+//        route_config_finish.animate().translationY(cir_centerY - (route_config_finish.getTop() + route_config_finish.getHeight()/2))
+//                .translationX(cir_centerX - (route_config_finish.getLeft() + route_config_finish.getWidth() / 2))
+//                .scaleX(0).scaleY(0).setDuration(300).setStartDelay(4000).start();
 
         AnimatorSet circleOutAnimation = (AnimatorSet) AnimatorInflater.loadAnimator(mContext,R.animator.route_config_out_animation);
         circleOutAnimation.setDuration(2000).setTarget(route_config_circle);
-        circleOutAnimation.setStartDelay(4400);
+        circleOutAnimation.setInterpolator(new BounceInterpolator());
+        circleOutAnimation.setStartDelay(400);
         circleOutAnimation.start();
 
         AnimatorSet deviceOutAnimation = (AnimatorSet) AnimatorInflater.loadAnimator(mContext,R.animator.route_config_out_animation);
         deviceOutAnimation.setDuration(2000).setTarget(route_config_device_icon);
-        deviceOutAnimation.setStartDelay(4400);
+        deviceOutAnimation.setStartDelay(400);
+        deviceOutAnimation.setInterpolator(new BounceInterpolator());
         deviceOutAnimation.start();
 
     }

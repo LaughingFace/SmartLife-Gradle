@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@color/guide_page_bk"
+    android:background="@color/guide_page_bk_tran"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
@@ -70,11 +70,11 @@
     <TextView
         style="@style/guide_page_text_normal"
         android:id="@+id/start_connect_finish"
-        android:layout_gravity="center_horizontal|bottom"
+        android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:layout_width="150dp"
-        android:layout_marginBottom="30dp"
         android:gravity="center"
+        android:textSize="50sp"
         android:background="@drawable/guide_page_start_connect_btn"
         android:text="@string/guide_page_start_connect_btn"/>
 </FrameLayout>

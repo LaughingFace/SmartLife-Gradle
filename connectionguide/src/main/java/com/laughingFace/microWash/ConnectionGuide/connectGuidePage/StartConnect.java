@@ -49,16 +49,21 @@ public class StartConnect extends AnimationFragment{
         start_connect_wifi_icon.setAlpha(0);
         start_connect_phone.setAlpha(0);
         start_connect_finish.setAlpha(0);
+
+
         start_connect_hint.setAlpha(0);
 
         start_connect_finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                animationIn();
-                animationPerform();
-                animationOut();
-                start_connect_circle.setVisibility(View.VISIBLE);
-                start_connect_device.setVisibility(View.VISIBLE);
+//                animationIn();
+//                animationPerform();
+//                animationOut();
+//                start_connect_circle.setVisibility(View.VISIBLE);
+//                start_connect_device.setVisibility(View.VISIBLE);
+
+                if (null != mOnChangePage)
+                    mOnChangePage.nextPage();
             }
         });
 
@@ -75,7 +80,7 @@ public class StartConnect extends AnimationFragment{
          */
         ((AnimatorSet)childs.get(0)).getChildAnimations().get(0).setTarget(start_connect_circle);
         ((AnimatorSet)childs.get(0)).getChildAnimations().get(1).setTarget(start_connect_device);
-        childs.get(0).setDuration(2000);
+        childs.get(0).setDuration(2200);
 
         /**
          * 手机和提示文字淡 入动画
@@ -87,7 +92,8 @@ public class StartConnect extends AnimationFragment{
 
 
         start_connect_in_animation.start();
-
+        start_connect_circle.setVisibility(View.VISIBLE);
+        start_connect_device.setVisibility(View.VISIBLE);
     }
 
     @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
@@ -100,6 +106,9 @@ public class StartConnect extends AnimationFragment{
         start_connect_hint.animate().setStartDelay(4000).alpha(0).scaleX(0).scaleY(0).setDuration(1500).start();
 
         start_connect_wifi_icon.setVisibility(View.INVISIBLE);
+        start_connect_finish.setVisibility(View.VISIBLE);
+        start_connect_finish.animate().setStartDelay(4000).alpha(1).start();
+
     }
 
     @Override
@@ -110,7 +119,6 @@ public class StartConnect extends AnimationFragment{
         start_connect_perform_animation.setDuration(1500).setTarget(start_connect_wifi_icon);
         start_connect_perform_animation.setStartDelay(4000);
         start_connect_perform_animation.start();
-
     }
 
     @Override

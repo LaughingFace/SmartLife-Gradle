@@ -9,6 +9,6 @@
     <objectAnimator
         android:propertyName="translationX"
         android:valueFrom="0dp"
-        android:valueTo="-700dp"
+        android:valueTo="-900dp"
         android:valueType="floatType"/>
 </set>
