@@ -87,6 +87,7 @@
             android:layout_gravity="center"
             android:layout_width="120dp"
             android:layout_height="120dp"
+            android:src="@mipmap/guide_page_phone"
             />
     </FrameLayout>
     <View
@@ -104,7 +105,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="50"/>
-    <com.laughingFace.microWash.ConnectionGuide.view.FontTextView
+    <TextView
         android:id="@+id/route_config_hint"
         android:layout_width="wrap_content"
         android:layout_height="0dp"

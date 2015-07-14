@@ -3,6 +3,8 @@ package com.laughingFace.microWash;
 import android.app.Application;
 import android.content.Context;
 
+import com.laughingFace.microWash.util.FontsOverride;
+
 
 /**
  * Created by mathcoder23 on 15-5-29.
@@ -29,6 +31,7 @@ public class MyApplication extends Application {
             MobclickAgent.reportError(this, errorMessage);
             FileSharePreference.clearData(this,"errorLog");
         }*/
+        FontsOverride.setDefaultFont(this, "MONOSPACE", "font.otf");
     }
 
 
