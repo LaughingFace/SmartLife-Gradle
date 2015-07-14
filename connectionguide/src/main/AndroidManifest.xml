@@ -2,10 +2,7 @@
     package="com.laughingFace.microWash.ConnectionGuide">
 
     <application android:allowBackup="true" android:label="@string/app_name">
-        <activity android:name="com.laughingFace.microWash.ConnectionGuide.ConnectGuideActivity"
-
-           >
-
+        <activity android:name="com.laughingFace.microWash.ConnectionGuide.ConnectGuideActivity">
         <intent-filter>
             <action android:name="android.intent.action.MAIN"/>
             <category android:name="android.intent.category.LAUNCHER"/>

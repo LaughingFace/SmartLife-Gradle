@@ -36,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="70"/>
-    <TextView
+    <com.laughingFace.microWash.ConnectionGuide.view.FontTextView
         android:id="@+id/check_power_text"
         android:layout_width="wrap_content"
         android:layout_height="0dp"

@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">ConnectionGuide</string>
 
+    <!--<string name="font_family">rtwsyuegotrialultlight.otf</string>-->
+    <string name="font_family">font.otf</string>
+
     <string name="guidePage_check_power_hint">将插头插上电源\n灯光闪烁提示</string>
     <string name="guidePage_check_power_btn">完成</string>
 
