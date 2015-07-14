@@ -57,7 +57,8 @@
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginTop="440dp"
-        android:src="@mipmap/guide_page_phone" />
+        android:src="@mipmap/guide_page_phone"
+        />
     <TextView
         android:id="@+id/start_connect_hint"
         android:layout_width="wrap_content"

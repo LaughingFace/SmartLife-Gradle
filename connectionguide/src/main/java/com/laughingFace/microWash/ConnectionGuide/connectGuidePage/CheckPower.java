@@ -15,13 +15,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewPropertyAnimator;
-import android.view.animation.AccelerateInterpolator;
 import android.view.animation.OvershootInterpolator;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.laughingFace.microWash.ConnectionGuide.AnimationFragment;
 import com.laughingFace.microWash.ConnectionGuide.R;
+
+import java.util.ArrayList;
 
 /**
  * Created by mathcoder23 on 15-7-10.
@@ -63,7 +63,6 @@ public class CheckPower extends AnimationFragment {
                 //animationIn();
 //                animationPerform();
 //                animationOut();
-                //test();
 
                 //check_power_text.setVisibility(View.VISIBLE);
                 if (null != onChangePage)
@@ -81,81 +80,44 @@ public class CheckPower extends AnimationFragment {
         return view;
     }
 
-    public void test(){
-/*
-        AnimatorSet as = (AnimatorSet) AnimatorInflater.loadAnimator(context,R.animator.test);
-
-        as.getChildAnimations().get(0).setTarget(check_power_finish);
-        as.getChildAnimations().get(0).setDuration(2000);
-        //as.getChildAnimations().get(0).start();
-
-        as.getChildAnimations().get(1).setTarget(check_power_text);
-        as.getChildAnimations().get(1).setDuration(5000);
-        //as.getChildAnimations().get(1).start();
-
-//        as.setTarget(check_power_finish);
-        as.start();*/
-
-    }
-
-    AnimatorSet plug_in_animation;
-    AnimatorSet socket_in_animation;
+    AnimatorSet in_animation ;
+    ArrayList<Animator> in_animation_childs;
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR1)
     @Override
     public void animationIn() {
-        Log.i("aaa", "in....");
-        Log.i("xixi", "animationIn");
 
         /**
          * 按钮和文字的动画
          */
-        AnimatorSet finish_in_animation = (AnimatorSet) AnimatorInflater.loadAnimator(context,R.animator.check_power_finish_in_animation);
-        finish_in_animation.setTarget(check_power_finish);
-        finish_in_animation.setInterpolator(new OvershootInterpolator());
+        in_animation = (AnimatorSet) AnimatorInflater.loadAnimator(context,R.animator.check_power_in_animation);
+        in_animation_childs = in_animation.getChildAnimations();
 
-        AnimatorSet text_in_animation = (AnimatorSet) AnimatorInflater.loadAnimator(context,R.animator.check_power_text_in_animation);
-        text_in_animation.setTarget(check_power_text);
-        text_in_animation.setDuration(900).setStartDelay(200);
+        in_animation_childs.get(0).setDuration(300).setTarget(check_power_finish);
+        in_animation_childs.get(0).setInterpolator(new OvershootInterpolator());
 
-        text_in_animation.start();
-        finish_in_animation.start();
-        text_in_animation.addListener(new AnimatorListenerAdapter() {
+        in_animation_childs.get(1).setDuration(1000).setTarget(check_power_text);
 
-            @Override
-            public void onAnimationEnd(Animator animation) {
+        /**
+         * 圆形背景和插座滚入
+         */
+        ((AnimatorSet)in_animation_childs.get(2)).getChildAnimations().get(0).setDuration(700).setTarget(check_power_circle);
+        ((AnimatorSet)in_animation_childs.get(2)).getChildAnimations().get(1).setDuration(1700).setTarget(check_power_socket);
 
-                AnimatorSet circle_in_animation = (AnimatorSet) AnimatorInflater.loadAnimator(context, R.animator.check_power_circle_in);
-                circle_in_animation.setTarget(check_power_circle);
-                circle_in_animation.setDuration(700);
+        //插头入场动画
+        in_animation_childs.get(3).setTarget(check_power_plug);
 
-                 socket_in_animation = (AnimatorSet) AnimatorInflater.loadAnimator(context, R.animator.in_socket);
-                socket_in_animation.setTarget(check_power_socket);
+        in_animation.start();
 
-                //圆形背景和插座滚入
-                socket_in_animation.start();
-                circle_in_animation.start();
+        check_power_circle.setVisibility(View.VISIBLE);
+        check_power_socket.setVisibility(View.VISIBLE);
 
-                //插头入场动画
-                 plug_in_animation = (AnimatorSet) AnimatorInflater.loadAnimator(context, R.animator.check_power_plug_in);
-                plug_in_animation.setTarget(check_power_plug);
-                plug_in_animation.setStartDelay(700);
-                plug_in_animation.start();
 
-                check_power_circle.setVisibility(View.VISIBLE);
-                check_power_socket.setVisibility(View.VISIBLE);
-
-                super.onAnimationEnd(animation);
-            }
-        });
     }
 
     @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     @Override
     public void animationOut() {
-        plug_in_animation.cancel();
-        socket_in_animation.cancel();
-        Log.i("aaa", "out....");
 
         AnimatorSet circle_out_animation = (AnimatorSet) AnimatorInflater.loadAnimator(context,R.animator.check_power_circle_out);
         circle_out_animation.setTarget(check_power_circle);
@@ -177,50 +139,43 @@ public class CheckPower extends AnimationFragment {
                 .scaleY(0).scaleX(0).start();
         ObjectAnimator.ofFloat(check_power_finish, "translationY", 0, -1000).setDuration(300).start();
         ObjectAnimator.ofFloat(check_power_finish,"scaleY",1,0.1f).setDuration(300).start();
-        ObjectAnimator.ofFloat(check_power_finish,"scaleX",1,0.1f).setDuration(300).start();
-        ObjectAnimator.ofFloat(check_power_finish,"alpha",1,0).setDuration(300).start();
-//        check_power_finish.animate().setDuration(300).setStartDelay(5300).translationY(-1000)
-//                .scaleY(0).scaleX(0).start();
-
+        ObjectAnimator.ofFloat(check_power_finish, "scaleX", 1, 0.1f).setDuration(300).start();
+        ObjectAnimator.ofFloat(check_power_finish, "alpha", 1, 0).setDuration(300).start();
 
     }
 
     @Override
     public void animationPerform() {
 
-        plug_in_animation.cancel();
-        socket_in_animation.cancel();
-        AnimatorSet circle_perform_animation = (AnimatorSet) AnimatorInflater
-                .loadAnimator(context,R.animator.check_power_circle_perform);
-        circle_perform_animation.setDuration(500);
-        circle_perform_animation.setTarget(check_power_circle);
-        circle_perform_animation.start();
+        in_animation_childs.get(3).cancel();
 
-        AnimatorSet socket_perform_animation = (AnimatorSet) AnimatorInflater
-                .loadAnimator(context, R.animator.check_power_socket_perform);
-        socket_perform_animation.setDuration(500);
-        socket_perform_animation.setTarget(check_power_socket);
-        socket_perform_animation.start();
+        AnimatorSet in_animation = (AnimatorSet) AnimatorInflater.loadAnimator(context,R.animator.check_power_perform);
+        ArrayList<Animator> childs = in_animation.getChildAnimations();
 
-        AnimatorSet plug_perform_animation = (AnimatorSet) AnimatorInflater
-                .loadAnimator(context, R.animator.check_power_plug_perform);
-        plug_perform_animation.setDuration(700);
-        plug_perform_animation.setInterpolator(new AccelerateInterpolator());
-        plug_perform_animation.setTarget(check_power_plug);
-        plug_perform_animation.setStartDelay(400);
-        plug_perform_animation.start();
-        plug_perform_animation.addListener(new AnimatorListenerAdapter() {
+        /**
+         * 圆圈 的perform 动画
+         */
+        childs.get(0).setTarget(check_power_circle);
+        childs.get(0).setDuration(500);
+
+        childs.get(1).setTarget(check_power_socket);
+        childs.get(1).setDuration(500);
+
+        childs.get(2).setTarget(check_power_plug);
+        childs.get(2).setDuration(500);
+
+        childs.get(2).addListener(new AnimatorListenerAdapter() {
             @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
             @Override
             public void onAnimationEnd(Animator animation) {
 
-                ( (ImageView)check_power_plug).setImageResource(R.mipmap.guide_page_check_power_plug_ratated);
+                ((ImageView) check_power_plug).setImageResource(R.mipmap.guide_page_check_power_plug_ratated);
                 ViewPropertyAnimator vpa = check_power_plug.animate();
                 vpa.setDuration(3).rotationX(0).scaleY(1).scaleX(1).start();
                 super.onAnimationEnd(animation);
             }
         });
-
+        in_animation.start();
 
     }
 
